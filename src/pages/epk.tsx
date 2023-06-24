@@ -6,6 +6,7 @@ import Socials from '@/components/Socials'
 import OnTour from '@/components/OnTour'
 import Gallery from '@/components/Gallery'
 import NotableLabelsPerformances from '@/components/NotableLabelsPerformances'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -44,7 +45,12 @@ export default function Epk({tourDates, showPhotos}: {tourDates: any, showPhotos
 <div className="flex justify-center">
 <iframe width="840" height="473" src="https://www.youtube.com/embed/U68MMrw70dk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 </div>
+
 <Gallery epk photos={showPhotos.items}/>
+
+<div className="w-full">
+<Footer/>
+</div>
         </div>
     </main>
   )
