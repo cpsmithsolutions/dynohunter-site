@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 import {useState} from "react"
 import Image from "next/image"
 import axios from "axios"
 
-const WorkComponent = ({ imageUrl }: { imageUrl: string }) => {
+const WorkComponent = ({ imageUrl, epk }: { imageUrl: string, epk: boolean }) => {
   const [showDownloadIcon, setShowDownloadIcon] = useState<boolean>(false)
 
   console.log({showDownloadIcon})
@@ -36,11 +37,10 @@ document.body.removeChild(link)
     <div onMouseEnter={() => setShowDownloadIcon(true)}
     onMouseLeave={() => setShowDownloadIcon(false)}
     className="w-full md:w-[50%] relative">
-      {showDownloadIcon &&
-      //  <a href={"/images/dynohunter-image-3.jpg"} download={`dynohunter-image`}>
+      {showDownloadIcon && epk &&
         <div onClick={() => downloadImage(`https:${imageUrl}`)} className='absolute right-[10px] top-[10px] cursor-pointer transition duration-700 ease-in-out'>
           <div className="p-2">
-          <Image alt="download image" width={25} height={25} src="/images/download-icon.svg"/>
+          <Image alt="download image" width={20} height={20} src="/images/download-icon.svg"/>
           </div>
         </div>
         // </a>
