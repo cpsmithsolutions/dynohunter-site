@@ -53,7 +53,6 @@ const NotableLabelsPerformances = () => {
              <div className="p-4  text-[#D0D0D0]">Bar Standard</div>
              <div className="p-4  text-[#D0D0D0]">1134 Broadway</div>
              <div className="p-4  text-[#D0D0D0]">Cervantes Ballroom</div>
-             <div className="p-4  text-[#D0D0D0]">Mishawaka</div>
              </div>   
      </div> 
      </div>

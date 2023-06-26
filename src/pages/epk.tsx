@@ -1,4 +1,5 @@
 "use client"
+import React, {useState, useEffect} from "react"
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { createClient } from 'contentful'
@@ -11,6 +12,48 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Epk({tourDates, showPhotos}: {tourDates: any, showPhotos: any}) {
+  
+  const [windowSize, setWindowSize] = useState({
+    width: 840,
+    height: 473,
+  });
+ useWindowSize(); 
+  
+  function useWindowSize() {  
+    useEffect(() => {
+      // only execute all the code below in client side
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        if(window.innerWidth < 1024) {
+          setWindowSize({
+            width: window.innerWidth - 24,
+            height: (window.innerWidth - 24) * .55
+          });
+        } 
+        else {
+          setWindowSize({
+            width: 1000 - 24,
+            height: 1000 * .55
+          });
+        }
+       
+      }
+      
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+       
+      // Call handler right away so state gets updated with initial window size
+      if(window.innerWidth) {
+        handleResize();
+      }
+
+      
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+    }, []); // Empty array ensures that effect is only run on mount
+    return windowSize;
+  }
   
 
   return (
@@ -41,11 +84,12 @@ export default function Epk({tourDates, showPhotos}: {tourDates: any, showPhotos
 
         </div>
         <NotableLabelsPerformances/>
-<OnTour dates={tourDates.items} />
-<div className="flex justify-center">
-<iframe width="840" height="473" src="https://www.youtube.com/embed/U68MMrw70dk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-</div>
 
+<div className="flex justify-center">
+  
+<iframe width={windowSize.width} height={windowSize.height} src="https://www.youtube.com/embed/U68MMrw70dk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+</div>
+<OnTour dates={tourDates.items} />
 <Gallery epk photos={showPhotos.items}/>
 
 <div className="w-full">

@@ -24,10 +24,19 @@ export default function Home({tourDates, showPhotos}: {tourDates: any, showPhoto
       // Handler to call on window resize
       function handleResize() {
         // Set window width/height to state
-        setWindowSize({
-          width: window.innerWidth - 24,
-          height: (window.innerWidth - 24) * .55
-        });
+        if(window.innerWidth < 1024) {
+          setWindowSize({
+            width: window.innerWidth - 24,
+            height: (window.innerWidth - 24) * .55
+          });
+        } 
+        else {
+          setWindowSize({
+            width: 1000 - 24,
+            height: 1000 * .55
+          });
+        }
+      
       }
       
       // Add event listener
@@ -55,10 +64,10 @@ export default function Home({tourDates, showPhotos}: {tourDates: any, showPhoto
       <div className="w-full h-[24vw] lg:w-[1024px] lg:h-[244px] bg-cover bg-no-repeat bg-[url('/images/dynohunter-image-11.jpg')]">
       </div>
       </div>
-      <div className="flex p-10 justify-around items-end">
+      <div className="flex p-10 pt-6 justify-around items-end">
        <div className="mb-2">
        <div className="cursor-pointer">
-        <Image width={350} height={350} alt="dynohunter logo"  src="/images/dynohunter-logo.png"/>
+        <Image priority={true} width={350} height={350} alt="dynohunter logo"  src="/images/dynohunter-logo.png"/>
         </div>  
        </div>
         </div>
