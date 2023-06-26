@@ -23,7 +23,7 @@ const Socials = () => {
       <div className="w-[100%]">
         {!isMedium ?     
         <div>
-        <div className="w-[100%] flex p-5 pt-0 justify-around items-end">
+        <div className="w-[100%] flex p-2 sm:p-5 pt-0 justify-around items-end">
              <a target="_blank" href="https://www.facebook.com/dynohuntermusic">
     <div className="mb-3">
       <div className="cursor-pointer">
