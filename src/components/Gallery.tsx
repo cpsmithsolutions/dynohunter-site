@@ -26,10 +26,10 @@ const Gallery = ({ photos, epk = false }: { photos: any, epk: boolean }) => {
   return (
     <section id="work">
       <div className="">
-        <div className="w-full h-[100px] flex flex-col justify-center items-center">
+        {/* <div className="w-full h-[100px] flex flex-col justify-center items-center">
           <div className="text-[32px] sm:text-[36px] font-bold">Photos</div>
           {epk && <div className="text-[12px] text-[#D0D0D0]">(Available for Download)</div>}
-        </div>
+        </div> */}
         <div className="flex flex-wrap justify-center  bg-black items-center">
           {shuffledPhotos.map((p: any) => (
             <WorkComponent

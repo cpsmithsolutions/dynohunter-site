@@ -13,6 +13,7 @@
     "@types/node-fetch": "^2.6.4",
     "@types/react": "18.2.13",
     "@types/react-dom": "18.2.6",
+    "@types/react-responsive": "^8.0.5",
     "autoprefixer": "10.4.14",
     "contentful": "^10.2.4",
     "date-fns": "^2.30.0",
@@ -23,6 +24,8 @@
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-responsive": "^9.0.2",
+    "responsive": "^2.0.0",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"
   }

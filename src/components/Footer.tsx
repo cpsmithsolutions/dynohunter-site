@@ -12,10 +12,12 @@ return (
         {/* <a href="mailto:dynohuntermusic@gmail.com">
         <div className="text-[#D0D0D0] text-[12px]">dynohuntermusic@gmail.com</div>
         </a> */}
-      
-        <div className="text-[10px] text-[#D0D0D0] mt-2">
+      <a target="_blank" href="http://www.clarksmith.dev">
+      <div className="text-[10px] text-[#D0D0D0] cursor-pointer">
             Built by CP Smith Solutions
         </div>
+      </a>
+       
     </div>
 )
 }

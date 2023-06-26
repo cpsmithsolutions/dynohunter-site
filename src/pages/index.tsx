@@ -1,4 +1,5 @@
 "use client"
+import React, {useState, useEffect} from "react"
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { createClient } from 'contentful'
@@ -10,6 +11,39 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({tourDates, showPhotos}: {tourDates: any, showPhotos: any}) {
+
+  const [windowSize, setWindowSize] = useState({
+    width: 840,
+    height: 473,
+  });
+ useWindowSize(); 
+  
+  function useWindowSize() {  
+    useEffect(() => {
+      // only execute all the code below in client side
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        setWindowSize({
+          width: window.innerWidth - 24,
+          height: (window.innerWidth - 24) * .55
+        });
+      }
+      
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+       
+      // Call handler right away so state gets updated with initial window size
+      if(window.innerWidth) {
+        handleResize();
+      }
+
+      
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+    }, []); // Empty array ensures that effect is only run on mount
+    return windowSize;
+  }
   
 
   return (
@@ -39,10 +73,13 @@ export default function Home({tourDates, showPhotos}: {tourDates: any, showPhoto
         <iframe className="rounded-none" src="https://open.spotify.com/embed/artist/2gqNRmMqg0cqNPQ6mRcJEi?utm_source=generator&theme=0" width="100%" height="352" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
         </div>
-<OnTour dates={tourDates.items} />
-<div className="flex justify-center">
-<iframe width="840" height="473" src="https://www.youtube.com/embed/U68MMrw70dk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+<div className="flex justify-center p-5">
+<iframe
+width={windowSize.width} height={windowSize.height}
+src="https://www.youtube.com/embed/U68MMrw70dk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 </div>
+<OnTour dates={tourDates.items} />
 <Gallery epk={false} photos={showPhotos.items}/>
 <Footer/>
         </div>

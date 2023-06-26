@@ -1,40 +1,20 @@
-"use client"
-import {useState, useEffect} from "react"
-import Image from "next/image";
+import Image from "next/image"
 
-import { useMediaQuery } from 'react-responsive'
-import SocialsDesktop from "./SocialsDesktop";
-
-const Socials = () => {
-
-  const [isMedium, setIsMedium] = useState(true)
-
-  const isMediumSize = useMediaQuery({
-    query: '(min-width: 768px)',
-  })
-
-  useEffect(() => {
-    setIsMedium(isMediumSize)
-  }, [isMediumSize])
-
-
+const SocialsDesktop = () => {
 
     return (
-      <div className="w-[100%]">
-        {!isMedium ?     
-        <div>
         <div className="w-[100%] flex p-5 pt-0 justify-around items-end">
-             <a target="_blank" href="https://www.facebook.com/dynohuntermusic">
-    <div className="mb-3">
-      <div className="cursor-pointer">
-      <Image alt="facebook logo" width={30} height={30} src="/images/facebook-white.svg"/>
-      </div>
-      
-  
-    </div>
-    </a>
-   
-    <a target="_blank" href="https://www.instagram.com/dynohuntermusic">
+        <a target="_blank" href="https://www.facebook.com/dynohuntermusic">
+<div className="mb-3">
+ <div className="cursor-pointer">
+ <Image alt="facebook logo" width={30} height={30} src="/images/facebook-white.svg"/>
+ </div>
+ 
+
+</div>
+</a>
+
+<a target="_blank" href="https://www.instagram.com/dynohuntermusic">
 <div className="mb-1 ">
 <div className="cursor-pointer">
 <Image alt="instagram logo" width={40} height={40} src="/images/instagram-white.svg"/>
@@ -48,27 +28,25 @@ const Socials = () => {
 </div>
 </div>
 </a>
-       
+  
 
-<a target="_blank" href="https://www.beatport.com/artist/dynohunter/575899">
-<div className="">
-  <div className="cursor-pointer">
-  <Image alt="beatport logo" width={110} height={50} src="/images/beatport-white.png"/>
-  </div>
+<div className="mb-3">
+<a target="_blank" href="https://soundcloud.com/dynohunter">
+<div className="cursor-pointer">
+<Image alt="soundcloud logo" width={40} height={40} src="/images/soundcloud-white.png"/>
 </div>
 </a>
 </div>
-<div className="w-[100%] flex p-5 pt-0 justify-around items-end">
-<a target="_blank" href="https://soundcloud.com/dynohunter">
-<div className="mb-3">
-  <div className="cursor-pointer">
-  <Image alt="soundcloud logo" width={40} height={40} src="/images/soundcloud-white.png"/>
-  </div>
-  </div>
-  </a>
+<a target="_blank" href="https://www.beatport.com/artist/dynohunter/575899">
+<div className="">
+<div className="cursor-pointer">
+<Image alt="beatport logo" width={110} height={50} src="/images/beatport-white.png"/>
+</div>
+</div>
+</a>
 <a target="_blank" href="https://dynohunter.bandcamp.com/">
 <div className="mb-[10px]">
-    <div className="cursor-pointer">
+<div className="cursor-pointer">
 <Image alt="bandcamp" width={55} height={40} src="/images/bandcamp-white.png"/>
 </div>
 </div>
@@ -96,9 +74,7 @@ const Socials = () => {
 </div>
 </a>
 </div>
-</div> : <SocialsDesktop/>}
-    
-</div>
     )
 }
-export default Socials;
+
+export default SocialsDesktop
