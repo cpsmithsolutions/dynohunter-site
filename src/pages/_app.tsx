@@ -6,14 +6,14 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return <div>
       <NextSeo
-        title="DYNOHUNTER || Tribal House & Techno"
+        title="DYNOHUNTER | Tribal House & Techno"
         description="DYNOHUNTER is a tribal house and techno project created by DJ, Producer, Saxophonist and Impressions Records Label Boss Clark Smith. Smith layers tribal beats, ethereal textures, and searing synths over deep groovy basslines, using his Saxophone as the protagonist in the eclectic and exotic stories he shares."
         // canonical=""
         openGraph={{
           type: 'website',
           locale: 'en_US',
           url: 'https://www.dynohunter.com',
-          title: 'DYNOHUNTER || Tribal House & Techno',
+          title: 'DYNOHUNTER | Tribal House & Techno',
           description: 'DYNOHUNTER is a tribal house and techno project created by DJ, Producer, Saxophonist and Impressions Records Label Boss Clark Smith. Smith layers tribal beats, ethereal textures, and searing synths over deep groovy basslines, using his Saxophone as the protagonist in the eclectic and exotic stories he shares.',
           images: [
             {
@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
               alt: 'DYNOHUNTER Logo',
             },
           ],
-          site_name: 'DYNOHUNTER || Tribal House & Techno',
+          site_name: 'DYNOHUNTER | Tribal House & Techno',
         }}
         twitter={{
           handle: '@dynohuntermusic',
