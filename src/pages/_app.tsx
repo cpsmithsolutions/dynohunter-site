@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
           description: 'DYNOHUNTER is a tribal house and techno project created by DJ, Producer, Saxophonist and Impressions Records Label Boss Clark Smith. Smith layers tribal beats, ethereal textures, and searing synths over deep groovy basslines, using his Saxophone as the protagonist in the eclectic and exotic stories he shares.',
           images: [
             {
-              url: `https://images.ctfassets.net/mrg9gspwlszz/5MfxKhizQfJNoeGRmDB0d2/dd43a8b27e10f763f8174b4bacc7df0b/dynohunter-logo-black-bkg.png`,
+              url: `https://images.ctfassets.net/mrg9gspwlszz/5MfxKhizQfJNoeGRmDB0d2/6084441de665425c046dfd292c5b97ab/DSC07496_50-low-res.jpg`,
               width: 250,
               height: 250,
               alt: 'DYNOHUNTER Logo',
