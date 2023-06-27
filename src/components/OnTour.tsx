@@ -15,7 +15,7 @@ if(isFuture(dateObj)) {
   return true
 }
   else if (difference <= 14 && difference >= 0) {
-    return true; // Date is up to one week in the past
+    return true; 
   } else {
     return false;
   }
