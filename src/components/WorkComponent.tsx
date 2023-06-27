@@ -7,10 +7,8 @@ import axios from "axios"
 const WorkComponent = ({ imageUrl, epk }: { imageUrl: string, epk: boolean }) => {
   const [showDownloadIcon, setShowDownloadIcon] = useState<boolean>(false)
 
-  console.log({showDownloadIcon})
-
 async function downloadImage(imageUrl: string) {
-console.log({imageUrl})
+
 
 const urlArray = imageUrl.split("/")
 const imageName = urlArray[urlArray.length - 1]
@@ -26,12 +24,6 @@ link.click()
 document.body.removeChild(link)
 
   }
-
-
-  
-
- 
-
 
   return (
     <div onMouseEnter={() => setShowDownloadIcon(true)}
