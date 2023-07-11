@@ -2,28 +2,28 @@
 "use client"
 import {useState} from "react"
 import Image from "next/image"
-import axios from "axios"
+import { downloadImage } from "@/utilities/functions"
 
 const WorkComponent = ({ imageUrl, epk }: { imageUrl: string, epk: boolean }) => {
   const [showDownloadIcon, setShowDownloadIcon] = useState<boolean>(false)
 
-async function downloadImage(imageUrl: string) {
+// async function downloadImage(imageUrl: string) {
 
 
-const urlArray = imageUrl.split("/")
-const imageName = urlArray[urlArray.length - 1]
-const image = await fetch(imageUrl)
-const imageBlog = await image.blob()
-const imageURL = URL.createObjectURL(imageBlog)
+// const urlArray = imageUrl.split("/")
+// const imageName = urlArray[urlArray.length - 1]
+// const image = await fetch(imageUrl)
+// const imageBlog = await image.blob()
+// const imageURL = URL.createObjectURL(imageBlog)
 
-const link = document.createElement('a')
-link.href = imageURL
-link.download = imageName
-document.body.appendChild(link)
-link.click()
-document.body.removeChild(link)
+// const link = document.createElement('a')
+// link.href = imageURL
+// link.download = imageName
+// document.body.appendChild(link)
+// link.click()
+// document.body.removeChild(link)
 
-  }
+//   }
 
   return (
     <div onMouseEnter={() => setShowDownloadIcon(true)}

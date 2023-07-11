@@ -9,10 +9,17 @@ import Gallery from '@/components/Gallery'
 import NotableLabelsPerformances from '@/components/NotableLabelsPerformances'
 import Footer from '@/components/Footer'
 import { BIO } from "@/consts/consts"
+import { downloadImage } from "@/utilities/functions"
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Epk({tourDates, showPhotos}: {tourDates: any, showPhotos: any}) {
+export default function Epk({tourDates, showPhotos, logoPng}: {tourDates: any, showPhotos: any, logoPng: any}) {
+
+const logoPngUrl = logoPng.items[0].fields.logoPng.fields.file.url
+
+console.log({logoPngUrl})
+
+  const [showDownloadIcon, setShowDownloadIcon] = useState<boolean>(false)
   
   const [windowSize, setWindowSize] = useState({
     width: 840,
@@ -68,8 +75,21 @@ export default function Epk({tourDates, showPhotos}: {tourDates: any, showPhotos
       </div>
       <div className="flex p-10 pt-6 justify-around items-end">
        <div className="mb-2">
-       <div className="cursor-pointer">
+       <div 
+     onMouseEnter={() => setShowDownloadIcon(true)}
+     onMouseLeave={() => setShowDownloadIcon(false)}
+       className="cursor-pointer p-2">
         <Image width={350} height={350} alt="dynohunter logo"  src="/images/dynohunter-logo.png"/>
+        <div className="relative">
+<div className="absolute top-[-160px] right-[0px]">
+  {
+    showDownloadIcon && <div onClick={() => downloadImage(`https:${logoPngUrl}`)} className="p-2">
+    <Image alt="download image" width={20} height={20} src="/images/download-icon.svg"/>
+    </div>
+  }
+
+</div>
+        </div>
         </div>  
        </div>
         </div>
@@ -117,9 +137,11 @@ export async function getServerSideProps(context: any) {
 
   console.log({tourDates})
   const showPhotos = await client.getEntries({ content_type: 'showPhotos' })
+  const logoPng = await client.getEntries({ content_type: 'logoPng' })
   return { props: {
     showPhotos,
     tourDates,
+    logoPng
   }
   
   }
