@@ -76,7 +76,7 @@ const logoPngUrl = logoPng.items[0].fields.logoPng.fields.file.url
        <div 
      onMouseEnter={() => setShowDownloadIcon(true)}
      onMouseLeave={() => setShowDownloadIcon(false)}
-       className="cursor-pointer p-2">
+       className="cursor-pointer">
         <Image width={350} height={350} alt="dynohunter logo"  src="/images/dynohunter-logo.png"/>
         <div className="relative">
 <div className="absolute top-[-160px] right-[0px]">
@@ -95,8 +95,8 @@ const logoPngUrl = logoPng.items[0].fields.logoPng.fields.file.url
         <div>
           
         </div>
-        <div className="p-5 pb-10">
-        {BIO}
+        <div  className="p-5 pb-10">
+          {BIO}
         </div>
         <div className='px-5'>
         <iframe className="rounded-none" src="https://open.spotify.com/embed/artist/2gqNRmMqg0cqNPQ6mRcJEi?utm_source=generator&theme=0" width="100%" height="352" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
