@@ -8,6 +8,7 @@ import OnTour from '@/components/OnTour'
 import Gallery from '@/components/Gallery'
 import NotableLabelsPerformances from '@/components/NotableLabelsPerformances'
 import Footer from '@/components/Footer'
+import { BIO } from "@/consts/consts"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -77,8 +78,7 @@ export default function Epk({tourDates, showPhotos}: {tourDates: any, showPhotos
           
         </div>
         <div className="p-5 pb-10">
-        DYNOHUNTER is a tribal house and techno project created by DJ, Producer, Saxophonist and Impressions Records Label Boss Clark Smith. Smith layers tribal beats, ethereal textures, and searing synths over deep groovy basslines, using his Saxophone as the protagonist in the eclectic and exotic stories he shares. He’s been a mainstay in the vibrant Colorado music scene for the past decade having toured the country playing clubs, venues, and music festivals including Electric Forest, Suwanee Hulaween, Fillmore Auditorium, The Fox Theater, The Church & Club Vinyl. He’s had releases on international labels including Joof, Mistique, Clinique, and Deepersense along with stateside labels including Re:Sound, JourneyDeep, and Hood Politics. DYNOHUNTER has set himself apart by creating timeless music that speaks to true lovers of dance music. Always paying respect to the artists that have inspired him and paved the way, yet always striving to make music that is contemporary and progressive, a genuine expression of his own unique human experience and a reflection of the times.
-
+        {BIO}
         </div>
         <div className='px-5'>
         <iframe className="rounded-none" src="https://open.spotify.com/embed/artist/2gqNRmMqg0cqNPQ6mRcJEi?utm_source=generator&theme=0" width="100%" height="352" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
