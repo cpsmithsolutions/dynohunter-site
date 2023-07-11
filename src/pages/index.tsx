@@ -14,8 +14,6 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home({tourDates, showPhotos, previewImage}: {tourDates: any, showPhotos: any, previewImage: any}) {
 
 
-  console.log({previewImage})
-
   const [windowSize, setWindowSize] = useState({
     width: 840,
     height: 473,
@@ -115,7 +113,6 @@ export async function getServerSideProps(context: any) {
     order: 'fields.date',
   })
 
-  console.log({tourDates})
   const showPhotos = await client.getEntries({ content_type: 'showPhotos' })
   const previewImage = await client.getEntries({ content_type: 'previewImage' })
   return { props: {

@@ -17,8 +17,6 @@ export default function Epk({tourDates, showPhotos, logoPng}: {tourDates: any, s
 
 const logoPngUrl = logoPng.items[0].fields.logoPng.fields.file.url
 
-console.log({logoPngUrl})
-
   const [showDownloadIcon, setShowDownloadIcon] = useState<boolean>(false)
   
   const [windowSize, setWindowSize] = useState({
@@ -135,7 +133,6 @@ export async function getServerSideProps(context: any) {
     order: 'fields.date',
   })
 
-  console.log({tourDates})
   const showPhotos = await client.getEntries({ content_type: 'showPhotos' })
   const logoPng = await client.getEntries({ content_type: 'logoPng' })
   return { props: {

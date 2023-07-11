@@ -9,7 +9,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const response = await axios.get(imageUrl, { responseType: 'arraybuffer' });
     const fileBuffer = Buffer.from(response.data, 'binary');
-    console.log({fileBuffer})
     const fileBlob = new Blob([fileBuffer], { type: response.headers['content-type'] });
 
     // Set the appropriate headers to specify the file as an attachment.
