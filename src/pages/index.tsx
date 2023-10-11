@@ -89,7 +89,7 @@ export default function Home({tourDates, showPhotos, previewImage}: {tourDates: 
 <div className="flex justify-center p-5">
 <iframe
 width={windowSize.width} height={windowSize.height}
-src="https://www.youtube.com/embed/U68MMrw70dk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+src="https://www.youtube.com/embed/Sx5L_O4_L3Q?si=ipmdS3PkBhcKWU-G" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 </div>
 <OnTour dates={tourDates.items} />
 <Gallery epk={false} photos={showPhotos.items}/>
