@@ -32,6 +32,7 @@ const NotableLabelsPerformances = () => {
 </div>
 <div className="p-4  text-[#D0D0D0]">Ott
 </div>
+<div  className="p-4  text-[#D0D0D0]">Niki Sadeki</div>
              </div>   
      </div>
    
