@@ -59,9 +59,7 @@ export default function Home({tourDates, showPhotos, previewImage}: {tourDates: 
 
   return (
     <main
-      className={`${inter.className} flex justify-center`}
-
-    >
+      className={`${inter.className} flex justify-center`}>
       <div className="w-full lg:w-[1024px]">
       <div className="flex justify-center align-end">
       <div className="w-full h-[24vw] lg:w-[1024px] lg:h-[244px] bg-cover bg-no-repeat bg-[url('/images/dynohunter-image-11.jpg')]">
@@ -79,7 +77,7 @@ export default function Home({tourDates, showPhotos, previewImage}: {tourDates: 
           
         </div>
         <div className="p-5 pb-10">
-       {BIO
+       {BIO}
         </div>
         <div className='px-5'>
         {/* <iframe className="rounded-none" src="https://open.spotify.com/embed/artist/2gqNRmMqg0cqNPQ6mRcJEi?utm_source=generator&theme=0" width="100%" height="352" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
