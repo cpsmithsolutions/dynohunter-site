@@ -18,6 +18,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/utilities/facebook-tracking.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/utilities/facebook-tracking.js", "src/components/useFacebookPixel.js"],
   "exclude": ["node_modules"]
 }

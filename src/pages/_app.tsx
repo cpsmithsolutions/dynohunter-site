@@ -2,8 +2,11 @@ import '@/styles/globals.css'
 import { NextSeo } from 'next-seo'
 import type { AppProps } from 'next/app'
 import React from 'react'
+import useFacebookPixel from '../components/useFacebookPixel'
 
 export default function App({ Component, pageProps }: AppProps) {
+
+  useFacebookPixel();
 
   return <div>
       <NextSeo
