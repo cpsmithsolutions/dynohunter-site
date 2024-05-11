@@ -19,7 +19,7 @@ const useFacebookPixel = () => {
             s.parentNode.insertBefore(t,s)
         }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
-        fbq('init', '1509188753285411'); // Replace with your Pixel ID
+        fbq('init', '1491125361834708'); // Replace with your Pixel ID
         fbq('track', 'PageView');
     }, []);
 }
