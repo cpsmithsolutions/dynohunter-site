@@ -13,6 +13,7 @@ const NotableLabelsPerformances = () => {
                 <div className="p-4  text-[#D0D0D0]">Clinique</div>
                 <div className="p-4  text-[#D0D0D0]">JourneyDeep</div>
                 <div className="p-4  text-[#D0D0D0]">Re:Sound</div>
+                <div className="p-4  text-[#D0D0D0]">Channel 11 Records</div>
                 <div className="p-4  text-[#D0D0D0]">Hood Politics</div>
                 </div>
              
@@ -28,12 +29,10 @@ const NotableLabelsPerformances = () => {
              <div className="p-4  text-[#D0D0D0]">Audion</div>
              <div className="p-4  text-[#D0D0D0]">Bonobo</div>
              <div className="p-4  text-[#D0D0D0]">Rodriguez Jr.</div>
-             <div className="p-4  text-[#D0D0D0]">Shpongle
-</div>
-<div className="p-4  text-[#D0D0D0]">Ott
-</div>
-<div  className="p-4  text-[#D0D0D0]">Niki Sadeki</div>
-<div  className="p-4  text-[#D0D0D0]">LA Riots</div>
+             <div className="p-4  text-[#D0D0D0]">Shpongle</div>
+             <div className="p-4  text-[#D0D0D0]">Ott</div>
+             <div  className="p-4  text-[#D0D0D0]">Niki Sadeki</div>
+             <div  className="p-4  text-[#D0D0D0]">LA Riots</div>
              </div>   
              
      </div>
