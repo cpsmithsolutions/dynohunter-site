@@ -34,7 +34,7 @@ const Socials = () => {
     </div>
     </a>
    
-    <a target="_blank" href="https://www.instagram.com/dynohuntermusic">
+    <a target="_blank" href="https://www.instagram.com/dynohunter">
 <div className="mb-1 ">
 <div className="cursor-pointer">
 <Image alt="instagram logo" width={40} height={40} src="/images/instagram-white.svg"/>
