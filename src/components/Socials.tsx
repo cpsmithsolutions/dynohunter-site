@@ -34,13 +34,13 @@ const Socials = () => {
     </div>
     </a>
    
-    <a target="_blank" href="https://www.instagram.com/dynohunter">
+    {/* <a target="_blank" href="https://www.instagram.com/dynohunter">
 <div className="mb-1 ">
 <div className="cursor-pointer">
 <Image alt="instagram logo" width={40} height={40} src="/images/instagram-white.svg"/>
 </div>
 </div>
-</a>
+</a> */}
 <a target="_blank" href="https://www.youtube.com/@DYNOHUNTER">
 <div className="mb-[11px]">
 <div className="cursor-pointer">
