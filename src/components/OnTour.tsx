@@ -1,4 +1,3 @@
-"use client"
 const { differenceInDays, isPast, isFuture } = require('date-fns');
 import TourDate from "./TourDate";
 

@@ -9,9 +9,6 @@ return (
     <div className="p-2">
         <Image width={150} height={150} alt="dynohunter logo"  src="/images/dynohunter-logo.png"/>
         </div>
-        {/* <a href="mailto:dynohuntermusic@gmail.com">
-        <div className="text-[#D0D0D0] text-[12px]">dynohuntermusic@gmail.com</div>
-        </a> */}
       <a target="_blank" href="http://www.clarksmith.dev">
       <div className="text-[10px] text-[#D0D0D0] cursor-pointer">
             Built by CP Smith Solutions

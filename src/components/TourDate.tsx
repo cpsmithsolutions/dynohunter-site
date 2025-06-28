@@ -1,4 +1,3 @@
-"use client"
 import {useState, useEffect} from "react"
 import { format, compareAsc } from 'date-fns'
 import { useMediaQuery } from "react-responsive"
