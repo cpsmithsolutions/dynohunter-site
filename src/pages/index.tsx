@@ -7,7 +7,7 @@ import Socials from '@/components/Socials'
 import OnTour from '@/components/OnTour'
 import Gallery from '@/components/Gallery'
 import Footer from '@/components/Footer'
-import { BIO } from "@/consts/consts"
+import { BIO, SPOTIFY_LINK, YOUTUBE_LINK } from "@/consts/consts"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -80,13 +80,13 @@ export default function Home({tourDates, showPhotos, previewImage}: {tourDates: 
        {BIO}
         </div>
         <div className='px-5'>
-        <iframe className="rounded-none" src="https://open.spotify.com/embed/album/7AiaouMwDmyWpo06DFD1ll?utm_source=generator&theme=0" width="100%" height="352" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe className="rounded-none" src={SPOTIFY_LINK} width="100%" height="352" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
 <div className="flex justify-center p-5">
 <iframe
 width={windowSize.width} height={windowSize.height}
-src="https://www.youtube.com/embed/Sx5L_O4_L3Q?si=ipmdS3PkBhcKWU-G" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+src={YOUTUBE_LINK} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 </div>
 <OnTour dates={tourDates.items} />
 <Gallery epk={false} photos={showPhotos.items}/>

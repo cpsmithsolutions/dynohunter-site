@@ -7,7 +7,7 @@ import OnTour from '@/components/OnTour'
 import Gallery from '@/components/Gallery'
 import NotableLabelsPerformances from '@/components/NotableLabelsPerformances'
 import Footer from '@/components/Footer'
-import { BIO } from "@/consts/consts"
+import { BIO, SPOTIFY_LINK, YOUTUBE_LINK } from "@/consts/consts"
 import { downloadImage } from "@/utilities/functions"
 
 const inter = Inter({ subsets: ['latin'] })
@@ -98,13 +98,13 @@ const logoPngUrl = logoPng.items[0].fields.logoPng.fields.file.url
           {BIO}
         </div>
         <div className='px-5'>
-        <iframe className="rounded-none" src="https://open.spotify.com/embed/album/7AiaouMwDmyWpo06DFD1ll?utm_source=generator&theme=0" width="100%" height="352" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe className="rounded-none" src={SPOTIFY_LINK} width="100%" height="352" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
         <NotableLabelsPerformances/>
 
 <div className="flex justify-center">
   
-<iframe width={windowSize.width} height={windowSize.height} src="https://www.youtube.com/embed/Sx5L_O4_L3Q?si=ipmdS3PkBhcKWU-G" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+<iframe width={windowSize.width} height={windowSize.height} src={YOUTUBE_LINK} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 </div>
 <OnTour dates={tourDates.items} />
 <Gallery epk photos={showPhotos.items}/>
