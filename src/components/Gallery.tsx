@@ -26,7 +26,7 @@ const Gallery = ({ photos, epk = false }: { photos: any, epk: boolean }) => {
       <div className="">
        <div className="text-[32px] sm:text-[36px] text-center font-bold">Photos</div>
        <div className="justify-center w-full flex mb-4">
-       {epk && <div className="text-[#D0D0D0] text-[12px] ">High resolution images available for download on hover</div>}
+       {epk && <div className="text-[#D0D0D0] text-[10px] ">High resolution images available for download on hover</div>}
        </div>
         <div className="flex flex-wrap justify-center  bg-black items-center">
           {shuffledPhotos.map((p: any) => (

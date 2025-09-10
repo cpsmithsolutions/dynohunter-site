@@ -68,7 +68,7 @@ export default function Home({tourDates, showPhotos, previewImage}: {tourDates: 
       <div className="flex p-10 pt-6 justify-around items-end">
        <div className="mb-2">
        <div className="">
-        <Image priority={true} width={350} height={350} alt="dynohunter logo"  src="/images/dynohunter-logo.png"/>
+        <Image priority={true} width={375} height={350} alt="dynohunter logo"  src="/images/dynohunter-logo.png"/>
         </div>  
        </div>
         </div>

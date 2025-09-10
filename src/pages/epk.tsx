@@ -22,8 +22,8 @@ const logoPngUrl = logoPng.items[0].fields.logoPng.fields.file.url
     width: 840,
     height: 473,
   });
- useWindowSize(); 
-  
+ useWindowSize();
+
   function useWindowSize() {  
     useEffect(() => {
       // only execute all the code below in client side
@@ -76,7 +76,10 @@ const logoPngUrl = logoPng.items[0].fields.logoPng.fields.file.url
      onMouseEnter={() => setShowDownloadIcon(true)}
      onMouseLeave={() => setShowDownloadIcon(false)}
        className="cursor-pointer">
-        <Image width={350} height={350} alt="dynohunter logo"  src="/images/dynohunter-logo.png"/>
+        <Image width={375} height={200} alt="dynohunter logo"  src="/images/dynohunter-logo.png"/>
+          <div className="justify-center w-full flex">
+      <div className="text-[#D0D0D0] text-[10px] mt-6">Logo available for download on hover</div>
+       </div>
         <div className="relative">
 <div className="absolute top-[-160px] right-[0px]">
   {
