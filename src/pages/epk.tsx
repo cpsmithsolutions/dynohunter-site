@@ -9,6 +9,7 @@ import NotableLabelsPerformances from '@/components/NotableLabelsPerformances'
 import Footer from '@/components/Footer'
 import { BIO, SPOTIFY_LINK, YOUTUBE_LINK } from "@/consts/consts"
 import { downloadImage } from "@/utilities/functions"
+import Link from "next/link"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -112,6 +113,22 @@ const logoPngUrl = logoPng.items[0].fields.logoPng.fields.file.url
 <OnTour dates={tourDates.items} />
 <Gallery epk photos={showPhotos.items}/>
 
+<div className="justify-center align-items w-[full] flex flex-col mt-4">
+
+  <div  className="text-[#FFFFFF text-[36px] mt-6 font-bold cursor-pointer text-center">Additional Downloadable Media</div>
+  <div className="flex justify-center align-items w-full">
+     <Link href="https://drive.google.com/drive/folders/1LWG8pPzS8dH6F14KoAGIoST83bjAFcpg?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div className="text-[#D0D0D0] text-[20px] mt-6 font-bold cursor-pointer text-center">Photos (portrait & landscape)</div>
+  </Link>
+  <div className="px-8">
+  
+  </div>
+  <Link href="https://drive.google.com/drive/folders/0B2cm1dEtF0kzY2syRHlDS042SHM?resourcekey=0-GnhUTBqAuAj8VlX4MHhfvg&usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div className="text-[#D0D0D0] text-[20px] mt-6 font-bold cursor-pointer text-center">Performance Videos</div>
+  </Link>
+  </div>
+   
+</div>
 <div className="w-full">
 <Footer/>
 </div>
