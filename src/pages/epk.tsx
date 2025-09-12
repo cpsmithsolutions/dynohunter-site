@@ -116,15 +116,18 @@ const logoPngUrl = logoPng.items[0].fields.logoPng.fields.file.url
 <div className="justify-center align-items w-[full] flex flex-col mt-4">
 
   <div  className="text-[#FFFFFF text-[36px] mt-6 font-bold cursor-pointer text-center">Additional Downloadable Media</div>
-  <div className="flex justify-center align-items w-full">
+  <div className="flex justify-center align-items w-full flex-wrap gap-8">
      <Link href="https://drive.google.com/drive/folders/1LWG8pPzS8dH6F14KoAGIoST83bjAFcpg?usp=sharing" target="_blank" rel="noopener noreferrer">
-    <div className="text-[#D0D0D0] text-[20px] mt-6 font-bold cursor-pointer text-center">Photos (portrait & landscape)</div>
+    <div className="text-[#D0D0D0] text-[20px] mt-6 font-bold cursor-pointer text-center">Photos</div>
   </Link>
-  <div className="px-8">
-  
-  </div>
   <Link href="https://drive.google.com/drive/folders/0B2cm1dEtF0kzY2syRHlDS042SHM?resourcekey=0-GnhUTBqAuAj8VlX4MHhfvg&usp=sharing" target="_blank" rel="noopener noreferrer">
     <div className="text-[#D0D0D0] text-[20px] mt-6 font-bold cursor-pointer text-center">Performance Videos</div>
+  </Link>
+  <Link href="https://drive.google.com/drive/folders/15dcHB2tVoCIzWRE_3igN6VgMwQOEpgnK?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div className="text-[#D0D0D0] text-[20px] mt-6 font-bold cursor-pointer text-center">Logos</div>
+  </Link>
+    <Link href="https://docs.google.com/document/d/19aL-9hIOpcuDixnIT7-96yWez5oNH-jEWhJIv76rSas/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div className="text-[#D0D0D0] text-[20px] mt-6 font-bold cursor-pointer text-center">Backline / Tech Rider</div>
   </Link>
   </div>
    
