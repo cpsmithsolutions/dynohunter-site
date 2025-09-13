@@ -113,21 +113,21 @@ const logoPngUrl = logoPng.items[0].fields.logoPng.fields.file.url
 <OnTour dates={tourDates.items} />
 <Gallery epk photos={showPhotos.items}/>
 
-<div className="justify-center align-items w-[full] flex flex-col mt-4">
+<div className="justify-center align-items w-[full] flex flex-col mt-4 px-2">
 
   <div  className="text-[#FFFFFF text-[36px] mt-6 font-bold cursor-pointer text-center">Additional Downloadable Media</div>
-  <div className="flex justify-center align-items w-full flex-wrap gap-8">
+  <div className="flex justify-center align-items w-full flex-wrap">
      <Link href="https://drive.google.com/drive/folders/1LWG8pPzS8dH6F14KoAGIoST83bjAFcpg?usp=sharing" target="_blank" rel="noopener noreferrer">
-    <div className="text-[#D0D0D0] text-[20px] mt-6 font-bold cursor-pointer text-center">Photos</div>
+    <div className="text-[#D0D0D0] text-[20px] font-bold cursor-pointer px-4 py-2 text-center">Photos</div>
   </Link>
   <Link href="https://drive.google.com/drive/folders/0B2cm1dEtF0kzY2syRHlDS042SHM?resourcekey=0-GnhUTBqAuAj8VlX4MHhfvg&usp=sharing" target="_blank" rel="noopener noreferrer">
-    <div className="text-[#D0D0D0] text-[20px] mt-6 font-bold cursor-pointer text-center">Performance Videos</div>
+    <div className="text-[#D0D0D0] text-[20px]  font-bold cursor-pointer px-4 py-2 text-center">Performance Videos</div>
   </Link>
   <Link href="https://drive.google.com/drive/folders/15dcHB2tVoCIzWRE_3igN6VgMwQOEpgnK?usp=sharing" target="_blank" rel="noopener noreferrer">
-    <div className="text-[#D0D0D0] text-[20px] mt-6 font-bold cursor-pointer text-center">Logos</div>
+    <div className="text-[#D0D0D0] text-[20px] font-bold cursor-pointer px-4 py-2 text-center">Logos</div>
   </Link>
     <Link href="https://docs.google.com/document/d/19aL-9hIOpcuDixnIT7-96yWez5oNH-jEWhJIv76rSas/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-    <div className="text-[#D0D0D0] text-[20px] mt-6 font-bold cursor-pointer text-center">Backline / Tech Rider</div>
+    <div className="text-[#D0D0D0] text-[20px] font-bold cursor-pointer px-4 py-2 text-center">Backline / Tech Rider</div>
   </Link>
   </div>
    

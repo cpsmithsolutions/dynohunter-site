@@ -51,7 +51,7 @@ const Socials = () => {
 
 <a target="_blank" href="https://www.beatport.com/artist/dynohunter/575899">
 <div className="">
-  <div className="cursor-pointer">
+  <div className="cursor-pointer pb-1">
   <Image alt="beatport logo" width={110} height={50} src="/images/beatport-white.png"/>
   </div>
 </div>
