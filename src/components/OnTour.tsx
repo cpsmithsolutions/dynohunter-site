@@ -19,22 +19,18 @@ if(isFuture(dateObj)) {
     return false;
   }
 }
+    const tourDateComponents = dates
+      .filter((date: any) => isWithinTwoWeek(date.fields.date))
+      .map((date: any) => <TourDate key={date.sys.id} show={date.fields} />);
+
+    if (tourDateComponents.length === 0) return <></>;
 
     return (
-        <div className="w-[100%] px-2 sm:px-4 md:px-8 py-8">
-        <div className="text-[32px] sm:text-[36px] mb-4 text-center font-bold">Shows</div>
-        {dates.map((date: any, i: number) => { 
-   if(isWithinTwoWeek(date.fields.date)) {
-    return  <TourDate key={date.sys.id} show={date.fields}/>
-   }
-   else {
-   }
-     
-       })} 
-
-       
+      <div className="w-[100%] px-2 sm:px-4 md:px-8 py-8">
+        <div className="text-[32px] sm:text-[36px] xl:text-4xl mb-4 text-center font-bold">Shows</div>
+        {tourDateComponents}
       </div>
-    )
+    );
 }
 
 export default OnTour;

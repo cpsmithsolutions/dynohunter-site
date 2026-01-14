@@ -1,6 +1,6 @@
 
 import React, {useState, useEffect} from "react"
-import Image from 'next/image'
+import MainContent from '@/components/MainContent'
 import { Inter } from 'next/font/google'
 import { createClient } from 'contentful'
 import Socials from '@/components/Socials'
@@ -59,54 +59,12 @@ export default function Home({tourDates, showPhotos, previewImage}: {tourDates: 
 
   return (
     <main className={`${inter.className} w-full`}>
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header Image */}
-        <div
-          className="w-full h-32 sm:h-48 md:h-64 lg:h-[40vw] lg:max-h-[320px] bg-cover bg-no-repeat rounded-md mb-6"
-          style={{ backgroundImage: "url('/images/dynohunter-image-11.jpg')" }}
-        ></div>
-
-        {/* Logo */}
-        <div className="flex justify-center mb-6">
-          <Image
-            priority={true}
-            width={600}
-            height={560}
-            alt="dynohunter logo"
-            src="/images/dynohunter-logo.png"
-            className="w-full max-w-xs sm:max-w-md lg:max-w-lg h-auto"
-          />
-        </div>
-
-        <Socials/>
-
-        {/* Bio */}
-        <div className="py-5 pb-10 ">
-          {BIO}
-        </div>
-
-        {/* Spotify */}
-        <div className="w-full my-6">
-          <iframe className="rounded-md w-full" src={SPOTIFY_LINK} height="352" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-
-        {/* YouTube */}
-        <div className="w-full my-6">
-          <iframe
-            className="rounded-md w-full"
-            width="100%"
-            height={windowSize.height}
-            src={YOUTUBE_LINK}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
-        </div>
-
-        <OnTour dates={tourDates.items} />
-        <Gallery epk={false} photos={showPhotos.items}/>
-        <Footer/>
-      </div>
+      <MainContent
+        tourDates={tourDates}
+        showPhotos={showPhotos}
+        windowSize={windowSize}
+        epk={false}
+      />
     </main>
   )
 }

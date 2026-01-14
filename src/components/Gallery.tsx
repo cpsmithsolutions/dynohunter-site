@@ -24,7 +24,7 @@ const Gallery = ({ photos, epk = false }: { photos: any, epk: boolean }) => {
   return (
     <section id="work">
       <div className="">
-       <div className="text-[32px] sm:text-[36px] text-center font-bold">Photos</div>
+      <div className="text-[32px] sm:text-[36px] xl:text-[48px] text-center font-bold">Gallery</div>
        <div className="justify-center w-full flex mb-4">
        {epk && <div className="text-[#D0D0D0] text-[14px] px-2 text-center"> Download high-res images on hover. More images and videos are linked below the gallery section</div>}
        </div>
