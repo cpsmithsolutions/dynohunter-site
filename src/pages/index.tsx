@@ -58,40 +58,55 @@ export default function Home({tourDates, showPhotos, previewImage}: {tourDates: 
   
 
   return (
-    <main
-      className={`${inter.className} flex justify-center`}>
-      <div className="w-full lg:w-[1024px]">
-      <div className="flex justify-center align-end">
-      <div className="w-full h-[24vw] lg:w-[1024px] lg:h-[244px] bg-cover bg-no-repeat bg-[url('/images/dynohunter-image-11.jpg')]">
-      </div>
-      </div>
-      <div className="flex p-10 pt-6 justify-around items-end">
-       <div className="mb-2">
-       <div className="">
-        <Image priority={true} width={375} height={350} alt="dynohunter logo"  src="/images/dynohunter-logo.png"/>
-        </div>  
-       </div>
-        </div>
-        <Socials/>
-        <div>
-          
-        </div>
-        <div className="p-5 pb-10">
-       {BIO}
-        </div>
-        <div className='px-5'>
-        <iframe className="rounded-none" src={SPOTIFY_LINK} width="100%" height="352" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <main className={`${inter.className} w-full`}>
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Image */}
+        <div
+          className="w-full h-32 sm:h-48 md:h-64 lg:h-[40vw] lg:max-h-[320px] bg-cover bg-no-repeat rounded-md mb-6"
+          style={{ backgroundImage: "url('/images/dynohunter-image-11.jpg')" }}
+        ></div>
+
+        {/* Logo */}
+        <div className="flex justify-center mb-6">
+          <Image
+            priority={true}
+            width={600}
+            height={560}
+            alt="dynohunter logo"
+            src="/images/dynohunter-logo.png"
+            className="w-full max-w-xs sm:max-w-md lg:max-w-lg h-auto"
+          />
         </div>
 
-<div className="flex justify-center p-5">
-<iframe
-width={windowSize.width} height={windowSize.height}
-src={YOUTUBE_LINK} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-</div>
-<OnTour dates={tourDates.items} />
-<Gallery epk={false} photos={showPhotos.items}/>
-<Footer/>
+        <Socials/>
+
+        {/* Bio */}
+        <div className="py-5 pb-10 ">
+          {BIO}
         </div>
+
+        {/* Spotify */}
+        <div className="w-full my-6">
+          <iframe className="rounded-md w-full" src={SPOTIFY_LINK} height="352" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        {/* YouTube */}
+        <div className="w-full my-6">
+          <iframe
+            className="rounded-md w-full"
+            width="100%"
+            height={windowSize.height}
+            src={YOUTUBE_LINK}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        <OnTour dates={tourDates.items} />
+        <Gallery epk={false} photos={showPhotos.items}/>
+        <Footer/>
+      </div>
     </main>
   )
 }
