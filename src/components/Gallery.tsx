@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react"
-import WorkComponent from './WorkComponent'
+import ImageComponent from './WorkComponent'
 
 const Gallery = ({ photos, epk = false }: { photos: any, epk: boolean }) => {
   const [shuffledPhotos, setShuffledPhotos] = useState<any>([])
@@ -30,8 +30,8 @@ const Gallery = ({ photos, epk = false }: { photos: any, epk: boolean }) => {
        </div>
         <div className="flex flex-wrap justify-center  bg-black items-center">
           {shuffledPhotos.map((p: any) => (
-            <WorkComponent
-            epk={epk}
+            <ImageComponent
+              epk={epk}
               key={p.fields?.imageUrl?.fields?.file?.url}
               imageUrl={p.fields?.imageUrl?.fields?.file?.url}
             />

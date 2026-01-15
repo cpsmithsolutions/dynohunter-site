@@ -46,12 +46,13 @@ const MainContent: React.FC<MainContentProps> = ({
           onMouseEnter={onLogoMouseEnter}
           onMouseLeave={onLogoMouseLeave}
           className={epk ? "cursor-pointer" : undefined}
+          aria-label="Dynohunter logo section"
         >
           <Image
             priority={true}
             width={600}
             height={560}
-            alt="dynohunter logo"
+            alt="Dynohunter logo"
             src={logoUrl}
             className="w-full max-w-xs sm:max-w-md lg:max-w-lg h-auto"
             onClick={epk && onLogoDownload ? onLogoDownload : undefined}
@@ -66,9 +67,9 @@ const MainContent: React.FC<MainContentProps> = ({
               <div className="relative">
                 <div className="absolute top-[-160px] right-[0px]">
                   {showDownloadIcon && (
-                    <div onClick={onLogoDownload} className="p-2">
+                    <div onClick={onLogoDownload} className="p-2" aria-label="Download logo button" role="button" tabIndex={0}>
                       <Image
-                        alt="download image"
+                        alt="Download logo"
                         width={20}
                         height={20}
                         src="/images/download-icon.svg"
