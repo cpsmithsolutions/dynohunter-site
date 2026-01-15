@@ -16,9 +16,11 @@
   }
 }
 
+html, body {
+  background: #000;
+}
 body {
   color: white;
-  background: black;
 }
 
 header {
